@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from "../Fenty Assets/logo.png";
+import { FaCaretDown } from "react-icons/fa6";
 
 
 const header = () => {
@@ -15,7 +16,7 @@ const header = () => {
 
             <div className='flex flex-row justify-around ml-[750px] -mt-16'>
                 <a className='text-xl font-semibold cursor-pointer hover:shadow-inner'>HOME</a>
-                <a className='text-xl font-semibold cursor-pointer hover:shadow-inner'>PRODUCTS</a>
+                <a className='flex flex-row text-xl font-semibold cursor-pointer hover:shadow-inner'>PRODUCTS < FaCaretDown style={{marginTop:'4px',marginLeft:'4px'}}/></a>
                 <a className='text-xl font-semibold cursor-pointer hover:shadow-inner'>STORES</a>
                 <a className='text-xl font-semibold cursor-pointer hover:shadow-inner'>CONTACT-US</a>
 

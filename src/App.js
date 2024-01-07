@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from "./components/header.jsx";
-import './App.css';
+import Landing from './components/landing.jsx';
+
 
 function App() {
   return (
     <div className="App">
 
       <Header />
-      
+      <Landing />
+
     </div>
   );
 }
