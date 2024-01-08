@@ -39,7 +39,14 @@ module.exports = {
           '50%': {
             transform: 'translateY(0)',
           },
-
+        },
+        slideRight: {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
         },
       },
       animation: {
@@ -47,6 +54,7 @@ module.exports = {
         slowBounce: 'bounce 3s infinite',
         float: 'float 5s infinite',
         reverseFloat : 'reverseFloat 5s infinite',
+        slowSlideRight: 'slideRight 2s ease-in-out',
       },
     },
   },
