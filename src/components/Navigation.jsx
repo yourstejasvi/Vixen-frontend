@@ -20,7 +20,7 @@ const Navigation = () => {
             </div>
 
             <div className='flex flex-row justify-around ml-[800px] -mt-[80px]'>
-                <a className='p-2 text-xl cursor-pointer tracking-widest hover:shadow-inner'>HOME</a>
+                <a className='p-2 text-xl cursor-pointer tracking-widest hover:shadow-inner'>ALL</a>
                 <div className='p-2 flex flex-row text-xl cursor-pointer hover:shadow-inner'>
                   <button className='flex flex-col tracking-wider' onClick={() => setIsOpen((prev) => !prev)}>
                     PRODUCTS
