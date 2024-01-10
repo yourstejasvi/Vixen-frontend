@@ -62,7 +62,7 @@ const Navigation = () => {
 
   return (
     <>
-        <div className={`z-60 w-full h-[120px] bg-slate-100 shadow-lg ${isScrolled ? 'fixed top-0' : ''}`}>
+        <div className={`z-20 w-full h-[120px] bg-slate-100 shadow-lg ${isScrolled ? 'fixed top-0' : ''}`}>
             <div className='flex flex-row'>
 
             <img src={Logo} className='h-24 ml-[50px] my-4 drop-shadow-xl'/>
@@ -105,6 +105,8 @@ const Navigation = () => {
         </div>
 
         {renderComponent()}
+
+        
 
     </>
   )
