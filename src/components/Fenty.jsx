@@ -34,7 +34,7 @@ const Fenty = () => {
 
         </div>
 
-        <img src={Rihanna} className='relative z-10 -mt-[300px] ml-[38px] rounded-full animate-reverseFloat'/>
+        <img src={Rihanna} alt="" className='relative z-10 -mt-[300px] ml-[38px] rounded-full animate-reverseFloat'/>
 
         <Swiper
         effect={'coverflow'}
@@ -53,28 +53,28 @@ const Fenty = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={Fenty1} />
+          <img src={Fenty1} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty2} />
+          <img src={Fenty2} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty3} />
+          <img src={Fenty3} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty4} />
+          <img src={Fenty4} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty5} />
+          <img src={Fenty5} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty6} />
+          <img src={Fenty6} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty7} />
+          <img src={Fenty7} alt=''/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Fenty8} />
+          <img src={Fenty8} alt=''/>
         </SwiperSlide>
       </Swiper>
 

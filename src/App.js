@@ -1,17 +1,20 @@
 import React from 'react';
-import Navigation from "./components/Navigation.jsx";
-import Fenty from './components/Fenty.jsx';
-import Lakme from './components/Lakme.jsx';
-import Footer from './components/Footer.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
 
-      <Navigation />
-      <Fenty />
-      <Lakme />
-      <Footer />
+      <BrowserRouter>
+
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+
+      </BrowserRouter>
+
+      
 
     </div>
   );
