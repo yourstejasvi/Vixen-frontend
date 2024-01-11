@@ -97,7 +97,7 @@ const Navigation = () => {
                 <a className='p-2 text-xl cursor-pointer tracking-wider hover:shadow-inner'
                    onClick={()=>handleLinkClick('Stores')}>STORES</a>
                 <a className='p-2 text-xl cursor-pointer tracking-wider hover:shadow-inner'
-                   onClick={()=>handleLinkClick('ContactUs')}>CONTACT-US</a>
+                   onClick={()=>handleLinkClick('ContactUs')}>LOGIN</a>
 
             </div>
             

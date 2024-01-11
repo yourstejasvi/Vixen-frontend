@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { TbFilterSearch } from "react-icons/tb";
 import { IoArrowForwardCircle, IoArrowBackCircle } from "react-icons/io5";
 import FormGroup from '@mui/material/FormGroup';
@@ -46,7 +46,7 @@ const All = () => {
       },
       {
         id:3,
-        name:"Naipaint",
+        name:"Nailpaint",
       },
       {
         id:4,
@@ -69,6 +69,23 @@ const All = () => {
         setValue(newValue);
 
       };
+
+      const [products, setProducts] = useState(null);
+
+      useEffect(() => {
+
+        const fetchProducts = async () => {
+          const response = await fetch('/api/products');
+          const json = await response.json()
+
+          if(response.ok) {
+              setProducts(json);
+          }
+
+        }
+
+        fetchProducts();
+      }, [])
 
   
   return (
@@ -117,10 +134,10 @@ const All = () => {
                           backgroundColor: 'black',
                         },
                         '& .MuiSlider-rail': {
-                          backgroundColor: 'black', // Change this to the desired color
+                          backgroundColor: 'black', 
                         },
                         '& .MuiSlider-track': {
-                          backgroundColor: 'black', // Change this to the desired color
+                          backgroundColor: 'black', 
                         },
                       }}
                       min={200}
@@ -129,6 +146,16 @@ const All = () => {
                     />
               </Box>
             </div>
+
+            <div className='ml-[500px]'>
+              {products && products.map((product) => (
+                <div key={product._id}>
+                  </div>
+
+              ))}
+
+            </div>
+
   
       </div>
             
