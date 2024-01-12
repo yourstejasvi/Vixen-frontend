@@ -147,9 +147,12 @@ const All = () => {
               </Box>
             </div>
 
-            <div className='ml-[500px]'>
+            <div className=''>
+              <h1 className='font-salsa text-2xl ml-12 mt-4 tracking-wider'>All products</h1>
               {products && products.map((product) => (
                 <div key={product._id}>
+                  <h1>{product.name}</h1>
+                  <h1>{product.price}</h1>
                   </div>
 
               ))}
