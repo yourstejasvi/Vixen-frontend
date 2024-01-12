@@ -4,10 +4,10 @@ import Logo from "../Fenty Assets/logo.png";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
 import All from "../components/All.jsx";
 import Stores from '../components/Stores.jsx';
-import ContactUs from '../components/ContactUs.jsx';
 import Fenty from '../components/Fenty.jsx';
 import Lakme from '../components/Lakme.jsx';
 import Sugar from '../components/Sugar.jsx';
+import Login from "../components/popup.jsx";
 
 
 const Navigation = () => {
@@ -19,6 +19,12 @@ const Navigation = () => {
 
   const [activeLink, setActiveLink] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [isPopup, setIsPopup] = useState(false);
+
+  const handlePopup = () => {
+    setIsPopup(!isPopup);
+  }
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -38,8 +44,6 @@ const Navigation = () => {
         return <All />;
       case 'Stores':
         return <Stores />;
-      case 'ContactUs':
-        return <ContactUs />;
       default:
         return (
           <>
@@ -51,6 +55,7 @@ const Navigation = () => {
     
     }
   };
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -97,7 +102,7 @@ const Navigation = () => {
                 <a className='p-2 text-xl cursor-pointer tracking-wider hover:shadow-inner'
                    onClick={()=>handleLinkClick('Stores')}>STORES</a>
                 <a className='p-2 text-xl cursor-pointer tracking-wider hover:shadow-inner'
-                   onClick={()=>handleLinkClick('ContactUs')}>LOGIN</a>
+                   onClick={handlePopup}>LOGIN</a>
 
             </div>
             
@@ -105,6 +110,8 @@ const Navigation = () => {
         </div>
 
         {renderComponent()}
+
+        {isPopup && <Login />}
 
         
 

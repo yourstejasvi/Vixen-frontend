@@ -6,6 +6,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import { IoBagAddSharp } from "react-icons/io5";
+import { IoBagCheck } from "react-icons/io5";
+import { GoHeart } from "react-icons/go";
+import { GoHeartFill } from "react-icons/go";
 
 
 function valuetext(value) {
@@ -73,20 +77,17 @@ const All = () => {
       const [products, setProducts] = useState(null);
 
       useEffect(() => {
-
         const fetchProducts = async () => {
-          const response = await fetch('/api/products');
+          const response = await fetch('/api/products/')
           const json = await response.json()
 
-          if(response.ok) {
-              setProducts(json);
+          if (response.ok) {
+            setProducts(json)
           }
-
         }
-
-        fetchProducts();
-      }, [])
-
+        fetchProducts()
+      },[])
+      
   
   return (
     <>
@@ -150,12 +151,10 @@ const All = () => {
             <div className=''>
               <h1 className='font-salsa text-2xl ml-12 mt-4 tracking-wider'>All products</h1>
               {products && products.map((product) => (
-                <div key={product._id}>
-                  <h1>{product.name}</h1>
-                  <h1>{product.price}</h1>
-                  </div>
-
-              ))}
+                
+                    <p key={product._id}>{product.name}</p>
+            
+                ))}
 
             </div>
 
