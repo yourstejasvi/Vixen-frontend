@@ -25,12 +25,12 @@ const Popup = () => {
     isOpen={isOpen}
     onRequestClose={CloseModal}
     contentLabel="Join Vixen"
-    className="h-[600px] w-[600px] ml-[450px] mt-[72px] text-salsa tracking-widest bg-slate-100 bg-opacity-93 rounded-3xl outline-none z-50"
+    className="h-[600px] w-[1000px] ml-[280px] mt-[72px] text-salsa tracking-widest bg-slate-100 rounded-3xl outline-2 outline-black z-50"
     style={{position:'relative',zIndex:'30'}}
     >   
 
 
-    <img src={Bg} alt="picture" className='relative z-20 opacity-55 rounded-2xl'/>
+    <img src={Bg} alt="picture" className='h-[500px] ml-[40px] mt-[50px] relative z-20 rounded-2xl shadow-md' style={{position:'relative',top:'50px'}}/>
     <Box 
     component='form'
     sx={{'& .MuiTextField-root': { m:1, width:'35ch'},
@@ -42,11 +42,11 @@ const Popup = () => {
     >
 
     
-     <button onClick={CloseModal} className='cursor-pointer ml-[550px] -mt-5 text-black bg-white hover:drop-shadow-drop-shadow-[10px_15px_15px_rgba(0,0,0,0.7)] absolute'><IoCloseSharp style={{scale:'2'}} /></button>
-        <h2 className='relative z-30 text-5xl text-black font-semibold content-center ml-[210px] -mt-[560px] pt-5'>LOG-IN</h2>
-        <div className='relative z-50 w-3/5 bg-black h-1 rounded-lg ml-[120px] mt-3'></div>
+     <button onClick={CloseModal} className='cursor-pointer ml-[920px] -mt-10 p-2 text-black bg-white hover:drop-shadow-drop-shadow-[10px_15px_15px_rgba(0,0,0,0.7)] absolute'><IoCloseSharp style={{scale:'2'}} /></button>
+        <h2 className='relative z-30 text-5xl text-black font-semibold content-center ml-[670px] -mt-[420px] pt-5'>LOG-IN</h2>
+        <div className='relative z-50 w-1/5 bg-black h-1 rounded-lg ml-[658px] mt-3'></div>
         
-        <div className='relative z-50 flex flex-col mt-16 ml-[150px]'>
+        <div className='relative z-50 flex flex-col mt-12 ml-[620px]'>
 
             <TextField required id="email" label="Email" className='bg-white rounded-2xl' ></TextField>
             <TextField required id="password" label="Password" className='bg-white rounded-2xl'></TextField>

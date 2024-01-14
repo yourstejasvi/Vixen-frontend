@@ -9,7 +9,6 @@ import Lakme from '../components/Lakme.jsx';
 import Sugar from '../components/Sugar.jsx';
 import Login from "../components/popup.jsx";
 
-
 const Navigation = () => {
 
   const dropdown = ['LIPSTICK', 'BLUSH', 'HIGHLIGHTER', 'EYELINER', 'FOUNDATION', 'EYE-SHADOW'];
@@ -44,6 +43,14 @@ const Navigation = () => {
         return <All />;
       case 'Stores':
         return <Stores />;
+      case 'Home':
+        return (
+          <>
+          <Fenty />
+          <Lakme />
+          <Sugar />
+          </>
+        )
       default:
         return (
           <>
@@ -66,14 +73,22 @@ const Navigation = () => {
   }, []);
 
   return (
-    <>
+    <>  
+        
         <div className={`z-20 w-full h-[120px] bg-slate-100 shadow-lg ${isScrolled ? 'fixed top-0' : ''}`}>
-            <div className='flex flex-row'>
 
-            <img src={Logo} className='h-24 ml-[50px] my-4 drop-shadow-xl'/>
-            <h2 className='font-salsa text-7xl p-4 mt-4 drop-shadow-xl tracking-wider'>Vixen</h2>
+            <a className='cursor-pointer' onClick={()=>handleLinkClick('Home')}>
 
-            </div>
+                  <div className='flex flex-row'>
+
+                  <img src={Logo} className='h-24 ml-[50px] my-4 drop-shadow-xl'/>
+                  <h2 className='font-salsa text-7xl p-4 mt-4 drop-shadow-xl tracking-wider'>Vixen</h2>
+
+                  </div>
+
+            </a>
+            
+        
 
             <div className='flex flex-row justify-around ml-[800px] -mt-[80px]'>
                 <a className='p-2 text-xl cursor-pointer tracking-widest hover:shadow-inner'

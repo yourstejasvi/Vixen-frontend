@@ -1,5 +1,5 @@
 {
-  "proxy":"http://localhost:4000",
+  "proxy": "http://localhost:4000",
   "name": "vixen",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
+    "sweetalert2": "^11.10.3",
     "swiper": "^11.0.5",
     "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
