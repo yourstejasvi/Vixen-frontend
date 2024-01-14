@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Modal from 'react-modal';
 import { IoCloseSharp } from "react-icons/io5";
-import { MdNavigateNext } from "react-icons/md";
 import { TextField } from '@mui/material';
 import Box from "@mui/material/Box";
 import Bg from "../backround.jpeg";
